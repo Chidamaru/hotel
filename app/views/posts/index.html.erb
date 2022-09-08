@@ -1,0 +1,14 @@
+<%= "お部屋一覧" %>
+<tbody>
+<% @posts.each do |post| %>
+    <tr>
+    <td><%= post.id %></td>
+    <td><%= post.room_name %></td>
+    <td><%= post.introduction %></td>
+    <td><%= post.price %></td>
+    <td><%= post.address %></td>
+    <td><%= post.image %></td>
+  </tr>
+<% end %>
+</tbody>
+
