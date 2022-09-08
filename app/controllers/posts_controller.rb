@@ -4,9 +4,16 @@ class PostsController < ApplicationController
   end
 
   def new
+    @posts = Post.new
   end
 
   def create
+    @post = Post.new(params.require(:post).permit(:room_name, :introduction, :price, :address, :image))
+     if @post.save
+       redirect_to :posts
+     else
+       render "new"
+     end
   end
 
   def show
