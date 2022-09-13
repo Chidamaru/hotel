@@ -1,4 +1,4 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
@@ -44,23 +44,4 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
-  include CarrierWave::MiniMagick
-  process resize_to_fit: [400, 200]
-
-  #アップロードした画像の表示
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
-
-#デフォルト画像の設定
-  def default_url
-  "https://presite-potepancamp-rails-02.herokuapp.com/assets/room01.jpg"
-  end
-
-  def extension_allowlist
-   %w(jpg jpeg gif png)
-  end 
-
-
 end

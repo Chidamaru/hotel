@@ -9,9 +9,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params.require(:post).permit(:room_name, :introduction, :price, :address, :image))
-     if @post.save
+    binding.pry 
+    if @post.save
+      binding.pry 
        redirect_to :posts
      else
+      binding.pry
        render "new"
      end
   end

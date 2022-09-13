@@ -26,7 +26,6 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,3 +60,7 @@ gem 'mini_magick'
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+
+gem 'bootsnap', '>= 1.4.2', require: false
+ gem 'rails-i18n'
+ gem 'pry-rails'
