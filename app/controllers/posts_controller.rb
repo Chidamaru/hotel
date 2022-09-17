@@ -9,17 +9,15 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params.require(:post).permit(:room_name, :introduction, :price, :address, :image))
-    binding.pry 
     if @post.save
-      binding.pry 
        redirect_to :posts
      else
-      binding.pry
        render "new"
      end
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def edit
@@ -29,6 +27,16 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+     @post.destroy
+     flash[:notice] = "ルームを削除しました"
+     redirect_to :posts
+  end
+
+  def search
+    @post = Post.search(params[:keyword])
+    @keyword = params[:keyword]
+    render "index"
   end
 
 end

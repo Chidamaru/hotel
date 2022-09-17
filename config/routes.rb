@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get 'index' => "user#index"
   get 'new' => "posts/new"
 
+  get 'search' => 'posts#search' #検索機能
+
   resources :posts
 end

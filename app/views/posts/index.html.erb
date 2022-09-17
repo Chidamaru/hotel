@@ -7,7 +7,11 @@
     <td><%= post.introduction %></td>
     <td><%= post.price %></td>
     <td><%= post.address %></td>
-    <td><%= image_tag post.image.url %></td>
+    <td><%= image_tag post.image.url , size: '320x240'%></td>
+  
+    <td>
+         <%= link_to "お部屋詳細", post %>
+    </td>
   </tr>
 <% end %>
 </tbody>

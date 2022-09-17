@@ -1,0 +1,29 @@
+<h3>ルーム詳細</h3>
+ 
+ <table>
+   <tr>
+    <td><%= image_tag @post.image.url, size: '320x240' %></td>
+   </tr>
+   <tr>
+     <th>ルーム名</th>
+     <td><%= @post.room_name %></td>
+   </tr>
+   <tr>
+     <th>ルーム紹介</th>
+     <td><%= @post.introduction %></td>
+   </tr>
+   <tr>
+     <th>料金</th>
+     <td><%= @post.price %></td>
+   </tr>
+   <tr>
+     <th>住所</th>
+     <td><%= @post.address %></td>
+   </tr>
+ </table>
+ 
+ <div>
+   <ul>
+     <li><%= link_to "ルーム情報一覧に戻る", :posts %></li>
+   </ul>
+ </div>
