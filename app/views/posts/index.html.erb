@@ -1,5 +1,10 @@
 <%= "お部屋一覧" %>
 <tbody>
+<div class="post-list">
+  <% @posts.each do |post| %>
+    <%= posts.room_name %>
+  <% end %>
+</div>
 <% @posts.each do |post| %>
     <tr>
     <td><%= post.id %></td>
@@ -8,7 +13,6 @@
     <td><%= post.price %></td>
     <td><%= post.address %></td>
     <td><%= image_tag post.image.url , size: '320x240'%></td>
-  
     <td>
          <%= link_to "お部屋詳細", post %>
     </td>

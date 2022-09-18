@@ -34,9 +34,10 @@ class PostsController < ApplicationController
   end
 
   def search
-    @post = Post.search(params[:keyword])
+    @posts = Post.search(params[:keyword])
     @keyword = params[:keyword]
     render "index"
+    
   end
 
 end
