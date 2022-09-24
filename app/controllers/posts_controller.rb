@@ -40,5 +40,9 @@ class PostsController < ApplicationController
     
   end
 
+  def reserve
+    
+  end
+
 end
 

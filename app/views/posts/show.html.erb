@@ -13,17 +13,44 @@
      <td><%= @post.introduction %></td>
    </tr>
    <tr>
-     <th>料金</th>
+     <th>料金/日</th>
      <td><%= @post.price %></td>
    </tr>
    <tr>
      <th>住所</th>
      <td><%= @post.address %></td>
    </tr>
- </table>
- 
+
+</table>
+
+
+
+<%= form_for [@post, @post.reservations.new] do |f| %>
+
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <div>
+      <label>開始</label>
+      <%= f.date_field :start_date %>
+  <div>
+  <div>
+      <label>終了</label>
+      <%= f.date_field :end_date %>
+  <div>
+      <label>人数</label>
+      <%= f.number_field :Count %>
+  </div>
+
+
+  
+  <%= f.submit "予約する", class: "btn btn-danger btn-wide" %>    
+  
+  
+  <% end %>
+  
  <div>
    <ul>
      <li><%= link_to "ルーム情報一覧に戻る", :posts %></li>
    </ul>
  </div>
+
+

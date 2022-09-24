@@ -1,0 +1,11 @@
+<%= form_for([@post, @post.reservations.new]) do |f| %>
+        <div class="field-body">
+            <div class="field">
+                <%= f.text_field :start_date, readonly: true %>
+            </div>
+            <div class="field">
+                <%= f.text_field :end_date, readonly: true %>
+            </div>
+        </div>
+    <%= f.submit "予約する"  %>
+<% end %>

@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7' #ログイン機能
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -64,3 +64,6 @@ gem 'net-pop'
 gem 'bootsnap', '>= 1.4.2', require: false
  gem 'rails-i18n'
  gem 'pry-rails'
+
+ gem 'bootstrap3-datetimepicker-rails'
+gem 'momentjs-rails', '>= 2.9.0'
