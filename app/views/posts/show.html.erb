@@ -28,6 +28,7 @@
 <%= form_for [@post, @post.reservations.new] do |f| %>
 
   <%= f.hidden_field :post_id, value: @post.id %>
+
   <div>
       <label>開始</label>
       <%= f.date_field :start_date %>
